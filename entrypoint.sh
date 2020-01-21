@@ -16,14 +16,14 @@ let reads=0
 init_options() {
     while true
     do
-        echo "Choose an option from the list below:\n 1) Info \n 2) Counter\n 3) Build \n *) Anything else to exit interactive mode."
+        echo "Choose an option from the list below:\n 1) Print Champion List \n 2) Enter Champion Number, Get the counters\n *) Anything else to exit interactive mode."
         read choice
         case $choice in
             1)
-                echo "Welcome to League of Legends CLI1111."
+                node championgetter.js
                 ;;
             2)
-                echo "Welcome to League of Legends CLI2222."
+                echo "Getting champion counter"
                 ;;
             *)
                 echo "Exiting League CLI. Bye!"
@@ -36,4 +36,3 @@ init_options() {
 # Do what u gotta do
 echo "Welcome to League CLI."
 init_options
-node championgetter.js

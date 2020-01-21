@@ -5,11 +5,20 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
   await page.goto('https://na.leagueoflegends.com/en/game-info/champions/');
 
-  const champions = await page.evaluate(() => {
-    const tds = Array.from(document.querySelectorAll(' li .champ-name a'))
+  var champions = await page.evaluate(() => {
+    var tds = Array.from(document.querySelectorAll(' li .champ-name a'))
     return tds.map(li => li.innerHTML)
   });
 
-  console.log(champions)
+  let i=0;
+  champions.forEach(champ => {
+      if(champ.includes(" ") || champ.includes("\'")){
+          champ = champ.replace(' ', '')
+          champ = champ.replace('\'', '')
+          champ = champ.replace('&amp; ', '')
+      }
+
+      console.log(i++ + ") " + champ)
+  })
   await browser.close();
 })();
