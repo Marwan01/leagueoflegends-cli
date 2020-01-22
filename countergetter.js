@@ -1,8 +1,6 @@
 const puppeteer = require('puppeteer');
 
 let userChamp = process.argv[2];
-
-
 (async () => {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
@@ -13,7 +11,7 @@ let userChamp = process.argv[2];
     return tds.map(li => li.innerHTML)
   });
 
-  let i=0;
+  
   champions.forEach(champ => {
       if(champ.includes(" ") || champ.includes("\'")){
           champ = champ.replace(' ', '')
@@ -23,8 +21,10 @@ let userChamp = process.argv[2];
   })
   if(Number.isInteger(parseInt(userChamp)) ) {
     await page.goto('https://lolcounter.com/champions/' + champions[userChamp]);
+    console.log("The 10 top counters for " + champions[userChamp] + " are:")
   } else {
     await page.goto('https://lolcounter.com/champions/' + userChamp);
+    console.log("The 10 top counters for " + userChamp + " are:")
   }
   
   var counters = await page.evaluate(() => {
@@ -32,6 +32,9 @@ let userChamp = process.argv[2];
     return tds.map(li => li.innerHTML)
   });
   counters = counters.slice(0,10)
-  console.log(counters)
+  let i=1;
+  counters.forEach(champ => {
+    console.log(i++ + "/ "+ champ)
+})
   await browser.close();
 })();

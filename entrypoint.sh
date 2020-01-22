@@ -9,7 +9,7 @@ restart() {
 }
 
 #number of new reads every script execution
-let reads=0 
+let champ
 # let ok=true
 
 # Verbose app init
@@ -23,7 +23,9 @@ init_options() {
                 node championgetter.js
                 ;;
             2)
-                echo "Getting champion counter"
+                echo "Enter Champion number or name (no spaces) to get the counters:"
+                read champ
+                node countergetter.js $champ
                 ;;
             *)
                 echo "Exiting League CLI. Bye!"
