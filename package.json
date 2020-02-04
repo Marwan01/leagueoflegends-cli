@@ -7,6 +7,11 @@
     "start": "node entrypoint.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin" : {
+    "lol" : "./entrypoint.js",
+    "league" : "./entrypoint.js",
+    "leagueoflegends" : "./entrypoint.js"
+  },
   "keywords": [
     "cli",
     "script",
@@ -14,7 +19,7 @@
     "league",
     "legends",
     "game",
-    "command",
+    "commander",
     "line",
     "nodejs",
     "puppeteer"
@@ -22,6 +27,7 @@
   "author": "Marwan01",
   "license": "MIT",
   "dependencies": {
+    "commander": "^4.1.1",
     "puppeteer": "^2.0.0"
   }
 }
