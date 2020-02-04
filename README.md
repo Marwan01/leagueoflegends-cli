@@ -4,7 +4,7 @@ Command line interface for League of Legends Players. Can be used to look up cha
 
 ## Usage
 
-This is an interactive shell program. Use numeric commands and then the enter key to interact with the CLI. If pick option 1 you can get the most updated list of all the champions with their numeric ids. If you use option 2 you can enter either the champion's name (no spaces, no special chars) or the champion's numeric equivalent from the list in option 1. Any other keys followed by enter will terminate the program.
+This is an interactive node app that runs in your terminal. Use numeric commands and then the enter key to interact with the CLI. If pick option 1 you can get the most updated list of all the champions with their numeric ids. If you use option 2 you can enter either the champion's name (no spaces, no special chars) or the champion's numeric equivalent from the list in option 1. Any other keys followed by enter will terminate the program.
 
 ## Demo
 
@@ -32,7 +32,6 @@ To run the tests, use ```npm test```
 
 * [NodeJS](https://nodejs.org/en/) - JavaScript runtime
 * [Puppeteer](https://pptr.dev/) - Used for web scraping and accessing the latest champion data from the web
-* [Shell](https://www.shellscript.sh/) - Used to run interactive mode using different node scripts
 
 ## Versioning
 

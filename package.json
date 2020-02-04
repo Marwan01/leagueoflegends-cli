@@ -1,23 +1,23 @@
 {
-  "name": "league-cli",
-  "version": "1.0.0",
+  "name": "leagueoflegends-cli",
+  "version": "1.1.0",
   "description": "Command line interface for League of Legends Players. Can be used to get champion information and counters.",
-  "main": "entrypoint.sh",
+  "main": "entrypoint.js",
   "scripts": {
-    "start": "sh entrypoint.sh",
+    "start": "node entrypoint.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
-    "shell",
     "cli",
     "script",
-    "bash",
     "league of legends",
     "league",
     "legends",
     "game",
     "command",
-    "line"
+    "line",
+    "nodejs",
+    "puppeteer"
   ],
   "author": "Marwan01",
   "license": "MIT",
