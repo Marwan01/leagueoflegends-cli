@@ -1,4 +1,4 @@
-# league-cli
+# leagueoflegends-cli
 
 Command line interface for League of Legends Players. Can be used to look up champions and their counters.
 
@@ -14,8 +14,8 @@ This is an interactive node app that runs in your terminal. Use numeric commands
 
 To run this program, follow these commands
 ```js
-git clone https://github.com/Marwan01/league-cli.git
-cd league-cli
+git clone https://github.com/Marwan01/leagueoflegends-cli.git
+cd leagueoflegends-cli
 npm install
 npm start
 ```
@@ -35,7 +35,7 @@ To run the tests, use ```npm test```
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Marwan01/league-cli). 
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/Marwan01/leagueoflegends-cli). 
 
 ## Authors
 
