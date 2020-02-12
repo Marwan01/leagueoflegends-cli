@@ -1,5 +1,5 @@
 {
-  "name": "league-cli",
+  "name": "leagueoflegends-cli",
   "version": "1.0.0",
   "description": "Command line interface for League of Legends Players. Can be used to get champion information and counters.",
   "main": "entrypoint.sh",
@@ -22,6 +22,10 @@
   "author": "Marwan01",
   "license": "MIT",
   "dependencies": {
+    "commander": "^4.1.1",
     "puppeteer": "^2.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
   }
 }
